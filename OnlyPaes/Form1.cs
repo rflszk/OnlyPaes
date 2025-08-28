@@ -16,5 +16,22 @@ namespace OnlyPaes
         {
             InitializeComponent();
         }
+
+        private void btnentrar_Click(object sender, EventArgs e)
+        {
+            if(txbemail.Text.Length < 6)
+            {
+                MessageBox.Show("Digite um Email válido!","Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(txbsenha.Text.Length < 4)
+            {
+                MessageBox.Show("Digite uma Senha válida!","Erro", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+             Model.Usuario usuario = new Model.Usuario();
+
+            }
+        }
     }
 }
