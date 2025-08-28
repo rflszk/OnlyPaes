@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OnlyPaes.Model
 {
-    internal class Usuario
+    public class Usuario
     {
         public string Id { get; set; }
         public string NomeCompleto { get; set; }
@@ -22,9 +22,11 @@ namespace OnlyPaes.Model
             Banco conexaoBD = new Banco();
             MySqlConnection con = conexaoBD.ObterConexao();
             MySqlCommand cmd = new MySqlCommand(comando, con);
+            string senhahash = EasyEncryption.SHA.ComputeSHA256Hash(Senha);
+
 
             cmd.Parameters.AddWithValue("@email", Email);
-            cmd.Parameters.AddWithValue("@senha", Senha);
+            cmd.Parameters.AddWithValue("@senha", senhahash);
 
             cmd.Prepare();
             DataTable tabela = new DataTable();

@@ -12,9 +12,19 @@ namespace OnlyPaes
 {
     public partial class MenuPrincipal : Form
     {
-        public MenuPrincipal()
+        //var global
+        Model.Usuario usuario = new Model.Usuario();
+
+        public MenuPrincipal(Model.Usuario usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
+            lblMenuOla.Text = $"Olá {usuario.NomeCompleto}! Escolha uma opção abaixo:";
+        }
+
+        private void btnMenuComandas_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

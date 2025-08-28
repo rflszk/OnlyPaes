@@ -108,7 +108,7 @@
             this.PibLogoImg.BackColor = System.Drawing.Color.Transparent;
             this.PibLogoImg.Image = global::OnlyPaes.Properties.Resources.ChatGPT_Image_27_de_ago__de_2025__20_19_59;
             this.PibLogoImg.InitialImage = ((System.Drawing.Image)(resources.GetObject("PibLogoImg.InitialImage")));
-            this.PibLogoImg.Location = new System.Drawing.Point(139, 17);
+            this.PibLogoImg.Location = new System.Drawing.Point(151, 17);
             this.PibLogoImg.Name = "PibLogoImg";
             this.PibLogoImg.Size = new System.Drawing.Size(96, 85);
             this.PibLogoImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -120,7 +120,7 @@
             this.pibTitulo.BackColor = System.Drawing.Color.Transparent;
             this.pibTitulo.Image = global::OnlyPaes.Properties.Resources.OnlypaesNome;
             this.pibTitulo.InitialImage = global::OnlyPaes.Properties.Resources.OnlypaesNome;
-            this.pibTitulo.Location = new System.Drawing.Point(232, 28);
+            this.pibTitulo.Location = new System.Drawing.Point(241, 28);
             this.pibTitulo.Name = "pibTitulo";
             this.pibTitulo.Size = new System.Drawing.Size(205, 74);
             this.pibTitulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

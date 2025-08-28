@@ -56,7 +56,7 @@
             // lblMenuOla
             // 
             this.lblMenuOla.AutoSize = true;
-            this.lblMenuOla.Location = new System.Drawing.Point(174, 178);
+            this.lblMenuOla.Location = new System.Drawing.Point(177, 178);
             this.lblMenuOla.Name = "lblMenuOla";
             this.lblMenuOla.Size = new System.Drawing.Size(489, 24);
             this.lblMenuOla.TabIndex = 1;
@@ -74,6 +74,7 @@
             this.btnMenuComandas.TabIndex = 2;
             this.btnMenuComandas.Text = "Comandas";
             this.btnMenuComandas.UseVisualStyleBackColor = false;
+            this.btnMenuComandas.Click += new System.EventHandler(this.btnMenuComandas_Click);
             // 
             // btnMenuProdutos
             // 
