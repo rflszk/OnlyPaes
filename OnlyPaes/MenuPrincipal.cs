@@ -26,5 +26,12 @@ namespace OnlyPaes
         {
 
         }
+
+        private void btnMenuUser_Click(object sender, EventArgs e)
+        {
+            FormUsuarios formUsuarios = new FormUsuarios(usuario);
+            formUsuarios.ShowDialog();
+            
+        }
     }
 }

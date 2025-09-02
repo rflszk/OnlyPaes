@@ -46,10 +46,10 @@
             // lblMenu
             // 
             this.lblMenu.AutoSize = true;
-            this.lblMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenu.Location = new System.Drawing.Point(300, 113);
+            this.lblMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenu.Location = new System.Drawing.Point(243, 113);
             this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(231, 33);
+            this.lblMenu.Size = new System.Drawing.Size(369, 55);
             this.lblMenu.TabIndex = 0;
             this.lblMenu.Text = "Menu Principal ";
             // 
@@ -114,6 +114,7 @@
             this.btnMenuUser.TabIndex = 5;
             this.btnMenuUser.Text = "Usuário";
             this.btnMenuUser.UseVisualStyleBackColor = false;
+            this.btnMenuUser.Click += new System.EventHandler(this.btnMenuUser_Click);
             // 
             // pibTitulo
             // 
