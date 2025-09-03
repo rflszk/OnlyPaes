@@ -12,6 +12,7 @@ namespace OnlyPaes
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -42,7 +43,7 @@ namespace OnlyPaes
                 }
                 else
                 {
-                    usuario.Id = resultado.Rows[0]["id"].ToString();
+                    usuario.Id = int.Parse(resultado.Rows[0]["id"].ToString());
                     usuario.NomeCompleto = resultado.Rows[0]["nome_completo"].ToString();
                 }
 
@@ -53,6 +54,18 @@ namespace OnlyPaes
                 Show();
 
 
+            }
+        }
+
+        private void pibOlho_Click(object sender, EventArgs e)
+        {
+            if (txbsenha.PasswordChar == '❃')
+            {
+                txbsenha.PasswordChar = '\0';
+            }
+            else
+            {
+                txbsenha.PasswordChar = '❃';
             }
         }
     }

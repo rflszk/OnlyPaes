@@ -38,9 +38,11 @@
             this.PibLogoImg = new System.Windows.Forms.PictureBox();
             this.pibTitulo = new System.Windows.Forms.PictureBox();
             this.pibDetalhe = new System.Windows.Forms.PictureBox();
+            this.pibOlho = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PibLogoImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibTitulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibDetalhe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibOlho)).BeginInit();
             this.SuspendLayout();
             // 
             // lblemail
@@ -132,12 +134,24 @@
             this.pibDetalhe.BackColor = System.Drawing.Color.Transparent;
             this.pibDetalhe.Image = global::OnlyPaes.Properties.Resources.luxa_org_opacity_changed___Microsoft_Fluentui_Emoji_Mono_Bread_1024;
             this.pibDetalhe.InitialImage = global::OnlyPaes.Properties.Resources.OnlypaesNome;
-            this.pibDetalhe.Location = new System.Drawing.Point(302, 147);
+            this.pibDetalhe.Location = new System.Drawing.Point(287, 160);
             this.pibDetalhe.Name = "pibDetalhe";
             this.pibDetalhe.Size = new System.Drawing.Size(495, 315);
             this.pibDetalhe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pibDetalhe.TabIndex = 11;
             this.pibDetalhe.TabStop = false;
+            // 
+            // pibOlho
+            // 
+            this.pibOlho.BackColor = System.Drawing.Color.Transparent;
+            this.pibOlho.Image = global::OnlyPaes.Properties.Resources.olho;
+            this.pibOlho.Location = new System.Drawing.Point(513, 236);
+            this.pibOlho.Name = "pibOlho";
+            this.pibOlho.Size = new System.Drawing.Size(29, 20);
+            this.pibOlho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibOlho.TabIndex = 12;
+            this.pibOlho.TabStop = false;
+            this.pibOlho.Click += new System.EventHandler(this.pibOlho_Click);
             // 
             // Form1
             // 
@@ -146,6 +160,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(187)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(668, 388);
+            this.Controls.Add(this.pibOlho);
             this.Controls.Add(this.PibLogoImg);
             this.Controls.Add(this.pibTitulo);
             this.Controls.Add(this.lblLogin);
@@ -166,6 +181,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PibLogoImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibTitulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibDetalhe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibOlho)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,6 +198,7 @@
         private System.Windows.Forms.PictureBox pibTitulo;
         private System.Windows.Forms.PictureBox PibLogoImg;
         private System.Windows.Forms.PictureBox pibDetalhe;
+        private System.Windows.Forms.PictureBox pibOlho;
     }
 }
 

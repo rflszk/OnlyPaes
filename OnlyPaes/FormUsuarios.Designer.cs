@@ -31,14 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
             this.grbCadastro = new System.Windows.Forms.GroupBox();
-            this.lblUsuNome = new System.Windows.Forms.Label();
-            this.lblUsuEmail = new System.Windows.Forms.Label();
-            this.lblUsuSenha = new System.Windows.Forms.Label();
-            this.txbUsuNome = new System.Windows.Forms.TextBox();
-            this.txbUsuEmail = new System.Windows.Forms.TextBox();
-            this.txbUsuSenha = new System.Windows.Forms.TextBox();
+            this.pibOlho = new System.Windows.Forms.PictureBox();
             this.btnUsuCadastrar = new System.Windows.Forms.Button();
+            this.txbUsuSenha = new System.Windows.Forms.TextBox();
+            this.txbUsuEmail = new System.Windows.Forms.TextBox();
+            this.txbUsuNome = new System.Windows.Forms.TextBox();
+            this.lblUsuSenha = new System.Windows.Forms.Label();
+            this.lblUsuEmail = new System.Windows.Forms.Label();
+            this.lblUsuNome = new System.Windows.Forms.Label();
             this.grbUsuEditar = new System.Windows.Forms.GroupBox();
+            this.pibOlho2 = new System.Windows.Forms.PictureBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.txbEditarSenha = new System.Windows.Forms.TextBox();
             this.txbEditarEmail = new System.Windows.Forms.TextBox();
@@ -47,18 +49,18 @@
             this.lblEditarEmail = new System.Windows.Forms.Label();
             this.lblEditarNome = new System.Windows.Forms.Label();
             this.grbUsuApagar = new System.Windows.Forms.GroupBox();
-            this.lblUsuApagar = new System.Windows.Forms.Label();
             this.btnUsuApagar = new System.Windows.Forms.Button();
+            this.lblUsuApagar = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.PibLogoImg = new System.Windows.Forms.PictureBox();
-            this.pibOlho = new System.Windows.Forms.PictureBox();
             this.pibDetalhe = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.grbCadastro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibOlho)).BeginInit();
             this.grbUsuEditar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibOlho2)).BeginInit();
             this.grbUsuApagar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibLogoImg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pibOlho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibDetalhe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +78,7 @@
             this.dgvUsuario.ReadOnly = true;
             this.dgvUsuario.Size = new System.Drawing.Size(444, 281);
             this.dgvUsuario.TabIndex = 0;
+            this.dgvUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuario_CellClick);
             // 
             // grbCadastro
             // 
@@ -94,57 +97,17 @@
             this.grbCadastro.TabStop = false;
             this.grbCadastro.Text = "Cadastro";
             // 
-            // lblUsuNome
+            // pibOlho
             // 
-            this.lblUsuNome.AutoSize = true;
-            this.lblUsuNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuNome.Location = new System.Drawing.Point(6, 33);
-            this.lblUsuNome.Name = "lblUsuNome";
-            this.lblUsuNome.Size = new System.Drawing.Size(127, 20);
-            this.lblUsuNome.TabIndex = 0;
-            this.lblUsuNome.Text = "Nome Completo:";
-            // 
-            // lblUsuEmail
-            // 
-            this.lblUsuEmail.AutoSize = true;
-            this.lblUsuEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuEmail.Location = new System.Drawing.Point(81, 71);
-            this.lblUsuEmail.Name = "lblUsuEmail";
-            this.lblUsuEmail.Size = new System.Drawing.Size(52, 20);
-            this.lblUsuEmail.TabIndex = 1;
-            this.lblUsuEmail.Text = "Email:";
-            // 
-            // lblUsuSenha
-            // 
-            this.lblUsuSenha.AutoSize = true;
-            this.lblUsuSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuSenha.Location = new System.Drawing.Point(73, 108);
-            this.lblUsuSenha.Name = "lblUsuSenha";
-            this.lblUsuSenha.Size = new System.Drawing.Size(60, 20);
-            this.lblUsuSenha.TabIndex = 2;
-            this.lblUsuSenha.Text = "Senha:";
-            // 
-            // txbUsuNome
-            // 
-            this.txbUsuNome.Location = new System.Drawing.Point(129, 33);
-            this.txbUsuNome.Name = "txbUsuNome";
-            this.txbUsuNome.Size = new System.Drawing.Size(144, 20);
-            this.txbUsuNome.TabIndex = 3;
-            // 
-            // txbUsuEmail
-            // 
-            this.txbUsuEmail.Location = new System.Drawing.Point(129, 71);
-            this.txbUsuEmail.Name = "txbUsuEmail";
-            this.txbUsuEmail.Size = new System.Drawing.Size(144, 20);
-            this.txbUsuEmail.TabIndex = 4;
-            // 
-            // txbUsuSenha
-            // 
-            this.txbUsuSenha.Location = new System.Drawing.Point(129, 108);
-            this.txbUsuSenha.Name = "txbUsuSenha";
-            this.txbUsuSenha.PasswordChar = '❃';
-            this.txbUsuSenha.Size = new System.Drawing.Size(144, 20);
-            this.txbUsuSenha.TabIndex = 5;
+            this.pibOlho.BackColor = System.Drawing.Color.Transparent;
+            this.pibOlho.Image = global::OnlyPaes.Properties.Resources.olho;
+            this.pibOlho.Location = new System.Drawing.Point(279, 108);
+            this.pibOlho.Name = "pibOlho";
+            this.pibOlho.Size = new System.Drawing.Size(29, 20);
+            this.pibOlho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibOlho.TabIndex = 7;
+            this.pibOlho.TabStop = false;
+            this.pibOlho.Click += new System.EventHandler(this.pibOlho_Click);
             // 
             // btnUsuCadastrar
             // 
@@ -160,9 +123,62 @@
             this.btnUsuCadastrar.UseVisualStyleBackColor = false;
             this.btnUsuCadastrar.Click += new System.EventHandler(this.btnUsuCadastrar_Click);
             // 
+            // txbUsuSenha
+            // 
+            this.txbUsuSenha.Location = new System.Drawing.Point(129, 108);
+            this.txbUsuSenha.Name = "txbUsuSenha";
+            this.txbUsuSenha.PasswordChar = '❃';
+            this.txbUsuSenha.Size = new System.Drawing.Size(144, 20);
+            this.txbUsuSenha.TabIndex = 5;
+            // 
+            // txbUsuEmail
+            // 
+            this.txbUsuEmail.Location = new System.Drawing.Point(129, 71);
+            this.txbUsuEmail.Name = "txbUsuEmail";
+            this.txbUsuEmail.Size = new System.Drawing.Size(144, 20);
+            this.txbUsuEmail.TabIndex = 4;
+            // 
+            // txbUsuNome
+            // 
+            this.txbUsuNome.Location = new System.Drawing.Point(129, 33);
+            this.txbUsuNome.Name = "txbUsuNome";
+            this.txbUsuNome.Size = new System.Drawing.Size(144, 20);
+            this.txbUsuNome.TabIndex = 3;
+            // 
+            // lblUsuSenha
+            // 
+            this.lblUsuSenha.AutoSize = true;
+            this.lblUsuSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuSenha.Location = new System.Drawing.Point(73, 108);
+            this.lblUsuSenha.Name = "lblUsuSenha";
+            this.lblUsuSenha.Size = new System.Drawing.Size(60, 20);
+            this.lblUsuSenha.TabIndex = 2;
+            this.lblUsuSenha.Text = "Senha:";
+            // 
+            // lblUsuEmail
+            // 
+            this.lblUsuEmail.AutoSize = true;
+            this.lblUsuEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuEmail.Location = new System.Drawing.Point(81, 71);
+            this.lblUsuEmail.Name = "lblUsuEmail";
+            this.lblUsuEmail.Size = new System.Drawing.Size(52, 20);
+            this.lblUsuEmail.TabIndex = 1;
+            this.lblUsuEmail.Text = "Email:";
+            // 
+            // lblUsuNome
+            // 
+            this.lblUsuNome.AutoSize = true;
+            this.lblUsuNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuNome.Location = new System.Drawing.Point(6, 33);
+            this.lblUsuNome.Name = "lblUsuNome";
+            this.lblUsuNome.Size = new System.Drawing.Size(127, 20);
+            this.lblUsuNome.TabIndex = 0;
+            this.lblUsuNome.Text = "Nome Completo:";
+            // 
             // grbUsuEditar
             // 
             this.grbUsuEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(187)))), ((int)(((byte)(90)))));
+            this.grbUsuEditar.Controls.Add(this.pibOlho2);
             this.grbUsuEditar.Controls.Add(this.btnEditar);
             this.grbUsuEditar.Controls.Add(this.txbEditarSenha);
             this.grbUsuEditar.Controls.Add(this.txbEditarEmail);
@@ -177,6 +193,18 @@
             this.grbUsuEditar.TabStop = false;
             this.grbUsuEditar.Text = "Editar";
             // 
+            // pibOlho2
+            // 
+            this.pibOlho2.BackColor = System.Drawing.Color.Transparent;
+            this.pibOlho2.Image = global::OnlyPaes.Properties.Resources.olho;
+            this.pibOlho2.Location = new System.Drawing.Point(279, 108);
+            this.pibOlho2.Name = "pibOlho2";
+            this.pibOlho2.Size = new System.Drawing.Size(29, 20);
+            this.pibOlho2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibOlho2.TabIndex = 8;
+            this.pibOlho2.TabStop = false;
+            this.pibOlho2.Click += new System.EventHandler(this.pibOlho2_Click);
+            // 
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(184)))), ((int)(((byte)(97)))));
@@ -189,6 +217,7 @@
             this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txbEditarSenha
             // 
@@ -254,16 +283,6 @@
             this.grbUsuApagar.TabStop = false;
             this.grbUsuApagar.Text = "Apagar";
             // 
-            // lblUsuApagar
-            // 
-            this.lblUsuApagar.AutoSize = true;
-            this.lblUsuApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuApagar.Location = new System.Drawing.Point(6, 16);
-            this.lblUsuApagar.Name = "lblUsuApagar";
-            this.lblUsuApagar.Size = new System.Drawing.Size(255, 20);
-            this.lblUsuApagar.TabIndex = 0;
-            this.lblUsuApagar.Text = "Selecione um usuário para apagar:";
-            // 
             // btnUsuApagar
             // 
             this.btnUsuApagar.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
@@ -277,6 +296,17 @@
             this.btnUsuApagar.TabIndex = 1;
             this.btnUsuApagar.Text = "Apagar";
             this.btnUsuApagar.UseVisualStyleBackColor = true;
+            this.btnUsuApagar.Click += new System.EventHandler(this.btnUsuApagar_Click);
+            // 
+            // lblUsuApagar
+            // 
+            this.lblUsuApagar.AutoSize = true;
+            this.lblUsuApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuApagar.Location = new System.Drawing.Point(6, 16);
+            this.lblUsuApagar.Name = "lblUsuApagar";
+            this.lblUsuApagar.Size = new System.Drawing.Size(255, 20);
+            this.lblUsuApagar.TabIndex = 0;
+            this.lblUsuApagar.Text = "Selecione um usuário para apagar:";
             // 
             // lblTitulo
             // 
@@ -301,24 +331,12 @@
             this.PibLogoImg.TabIndex = 18;
             this.PibLogoImg.TabStop = false;
             // 
-            // pibOlho
-            // 
-            this.pibOlho.BackColor = System.Drawing.Color.Transparent;
-            this.pibOlho.Image = global::OnlyPaes.Properties.Resources.olho;
-            this.pibOlho.Location = new System.Drawing.Point(279, 108);
-            this.pibOlho.Name = "pibOlho";
-            this.pibOlho.Size = new System.Drawing.Size(29, 20);
-            this.pibOlho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pibOlho.TabIndex = 7;
-            this.pibOlho.TabStop = false;
-            this.pibOlho.Click += new System.EventHandler(this.pibOlho_Click);
-            // 
             // pibDetalhe
             // 
             this.pibDetalhe.BackColor = System.Drawing.Color.Transparent;
             this.pibDetalhe.Image = global::OnlyPaes.Properties.Resources.luxa_org_opacity_changed___Microsoft_Fluentui_Emoji_Mono_Bread_1024;
             this.pibDetalhe.InitialImage = global::OnlyPaes.Properties.Resources.OnlypaesNome;
-            this.pibDetalhe.Location = new System.Drawing.Point(489, 250);
+            this.pibDetalhe.Location = new System.Drawing.Point(490, 259);
             this.pibDetalhe.Name = "pibDetalhe";
             this.pibDetalhe.Size = new System.Drawing.Size(495, 315);
             this.pibDetalhe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -347,12 +365,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
             this.grbCadastro.ResumeLayout(false);
             this.grbCadastro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibOlho)).EndInit();
             this.grbUsuEditar.ResumeLayout(false);
             this.grbUsuEditar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibOlho2)).EndInit();
             this.grbUsuApagar.ResumeLayout(false);
             this.grbUsuApagar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibLogoImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pibOlho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibDetalhe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -385,5 +404,6 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.PictureBox PibLogoImg;
         private System.Windows.Forms.PictureBox pibOlho;
+        private System.Windows.Forms.PictureBox pibOlho2;
     }
 }
