@@ -12,9 +12,11 @@ namespace OnlyPaes
 {
     public partial class FormComanda : Form
     {
-        public FormComanda()
+        Model.Usuario usuario;
+        public FormComanda(Model.Usuario usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
         }
     }
 }

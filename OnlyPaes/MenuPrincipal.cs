@@ -24,7 +24,8 @@ namespace OnlyPaes
 
         private void btnMenuComandas_Click(object sender, EventArgs e)
         {
-
+           FormComanda formComanda = new FormComanda(usuario);
+           formComanda.ShowDialog();
         }
 
         private void btnMenuUser_Click(object sender, EventArgs e)
@@ -32,6 +33,18 @@ namespace OnlyPaes
             FormUsuarios formUsuarios = new FormUsuarios(usuario);
             formUsuarios.ShowDialog();
             
+        }
+
+        private void btnMenuProdutos_Click(object sender, EventArgs e)
+        {
+            FormProdutos formProdutos = new FormProdutos(usuario);
+            formProdutos.ShowDialog();
+        }
+
+        private void btnMenuCaixa_Click(object sender, EventArgs e)
+        {
+            FormCaixa formcaixa = new FormCaixa(usuario);
+            formcaixa.ShowDialog();
         }
     }
 }

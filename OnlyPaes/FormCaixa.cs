@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnlyPaes.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace OnlyPaes
 {
     public partial class FormCaixa : Form
     {
-        public FormCaixa()
+        Model.Usuario usuario;
+        public FormCaixa(Model.Usuario usuario)
         {
-            InitializeComponent();
+            InitializeComponent();    
+            this.usuario = usuario;
         }
     }
 }

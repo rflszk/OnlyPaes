@@ -118,6 +118,8 @@
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Banco.cs" />
+    <Compile Include="Model\Categoria.cs" />
+    <Compile Include="Model\Produto.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormComanda.resx">
       <DependentUpon>FormComanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProdutos.resx">
+      <DependentUpon>FormProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
@@ -177,6 +182,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\olho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OnlypaesNome1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OnlypaesNome2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
