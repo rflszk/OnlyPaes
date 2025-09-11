@@ -285,10 +285,10 @@
             // 
             this.lblTituloProduto.AutoSize = true;
             this.lblTituloProduto.BackColor = System.Drawing.Color.Transparent;
-            this.lblTituloProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloProduto.Location = new System.Drawing.Point(114, 42);
+            this.lblTituloProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloProduto.Location = new System.Drawing.Point(195, 42);
             this.lblTituloProduto.Name = "lblTituloProduto";
-            this.lblTituloProduto.Size = new System.Drawing.Size(651, 55);
+            this.lblTituloProduto.Size = new System.Drawing.Size(442, 37);
             this.lblTituloProduto.TabIndex = 20;
             this.lblTituloProduto.Text = "Gerenciamento de Produtos";
             // 

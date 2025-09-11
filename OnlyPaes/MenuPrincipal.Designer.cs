@@ -46,19 +46,20 @@
             // lblMenu
             // 
             this.lblMenu.AutoSize = true;
-            this.lblMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenu.Location = new System.Drawing.Point(243, 113);
+            this.lblMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenu.Location = new System.Drawing.Point(287, 126);
             this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(369, 55);
+            this.lblMenu.Size = new System.Drawing.Size(252, 37);
             this.lblMenu.TabIndex = 0;
             this.lblMenu.Text = "Menu Principal ";
             // 
             // lblMenuOla
             // 
             this.lblMenuOla.AutoSize = true;
-            this.lblMenuOla.Location = new System.Drawing.Point(177, 178);
+            this.lblMenuOla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenuOla.Location = new System.Drawing.Point(200, 182);
             this.lblMenuOla.Name = "lblMenuOla";
-            this.lblMenuOla.Size = new System.Drawing.Size(489, 24);
+            this.lblMenuOla.Size = new System.Drawing.Size(409, 20);
             this.lblMenuOla.TabIndex = 1;
             this.lblMenuOla.Text = "Olá Administrador de Souza! Escolha uma opção abaixo:";
             // 
