@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
             this.grbCadastro = new System.Windows.Forms.GroupBox();
-            this.pibOlho = new System.Windows.Forms.PictureBox();
             this.btnUsuCadastrar = new System.Windows.Forms.Button();
             this.txbUsuSenha = new System.Windows.Forms.TextBox();
             this.txbUsuEmail = new System.Windows.Forms.TextBox();
@@ -40,7 +39,6 @@
             this.lblUsuEmail = new System.Windows.Forms.Label();
             this.lblUsuNome = new System.Windows.Forms.Label();
             this.grbUsuEditar = new System.Windows.Forms.GroupBox();
-            this.pibOlho2 = new System.Windows.Forms.PictureBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.txbEditarSenha = new System.Windows.Forms.TextBox();
             this.txbEditarEmail = new System.Windows.Forms.TextBox();
@@ -53,14 +51,16 @@
             this.lblUsuApagar = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.PibLogoImg = new System.Windows.Forms.PictureBox();
+            this.pibOlho2 = new System.Windows.Forms.PictureBox();
+            this.pibOlho = new System.Windows.Forms.PictureBox();
             this.pibDetalhe = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.grbCadastro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pibOlho)).BeginInit();
             this.grbUsuEditar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pibOlho2)).BeginInit();
             this.grbUsuApagar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibLogoImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibOlho2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibOlho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibDetalhe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,18 +96,6 @@
             this.grbCadastro.TabIndex = 14;
             this.grbCadastro.TabStop = false;
             this.grbCadastro.Text = "Cadastro";
-            // 
-            // pibOlho
-            // 
-            this.pibOlho.BackColor = System.Drawing.Color.Transparent;
-            this.pibOlho.Image = global::OnlyPaes.Properties.Resources.olho;
-            this.pibOlho.Location = new System.Drawing.Point(279, 108);
-            this.pibOlho.Name = "pibOlho";
-            this.pibOlho.Size = new System.Drawing.Size(29, 20);
-            this.pibOlho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pibOlho.TabIndex = 7;
-            this.pibOlho.TabStop = false;
-            this.pibOlho.Click += new System.EventHandler(this.pibOlho_Click);
             // 
             // btnUsuCadastrar
             // 
@@ -192,18 +180,6 @@
             this.grbUsuEditar.TabIndex = 15;
             this.grbUsuEditar.TabStop = false;
             this.grbUsuEditar.Text = "Editar";
-            // 
-            // pibOlho2
-            // 
-            this.pibOlho2.BackColor = System.Drawing.Color.Transparent;
-            this.pibOlho2.Image = global::OnlyPaes.Properties.Resources.olho;
-            this.pibOlho2.Location = new System.Drawing.Point(279, 108);
-            this.pibOlho2.Name = "pibOlho2";
-            this.pibOlho2.Size = new System.Drawing.Size(29, 20);
-            this.pibOlho2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pibOlho2.TabIndex = 8;
-            this.pibOlho2.TabStop = false;
-            this.pibOlho2.Click += new System.EventHandler(this.pibOlho2_Click);
             // 
             // btnEditar
             // 
@@ -331,6 +307,30 @@
             this.PibLogoImg.TabIndex = 18;
             this.PibLogoImg.TabStop = false;
             // 
+            // pibOlho2
+            // 
+            this.pibOlho2.BackColor = System.Drawing.Color.Transparent;
+            this.pibOlho2.Image = global::OnlyPaes.Properties.Resources.olho;
+            this.pibOlho2.Location = new System.Drawing.Point(279, 108);
+            this.pibOlho2.Name = "pibOlho2";
+            this.pibOlho2.Size = new System.Drawing.Size(29, 20);
+            this.pibOlho2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibOlho2.TabIndex = 8;
+            this.pibOlho2.TabStop = false;
+            this.pibOlho2.Click += new System.EventHandler(this.pibOlho2_Click);
+            // 
+            // pibOlho
+            // 
+            this.pibOlho.BackColor = System.Drawing.Color.Transparent;
+            this.pibOlho.Image = global::OnlyPaes.Properties.Resources.olho;
+            this.pibOlho.Location = new System.Drawing.Point(279, 108);
+            this.pibOlho.Name = "pibOlho";
+            this.pibOlho.Size = new System.Drawing.Size(29, 20);
+            this.pibOlho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibOlho.TabIndex = 7;
+            this.pibOlho.TabStop = false;
+            this.pibOlho.Click += new System.EventHandler(this.pibOlho_Click);
+            // 
             // pibDetalhe
             // 
             this.pibDetalhe.BackColor = System.Drawing.Color.Transparent;
@@ -365,13 +365,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
             this.grbCadastro.ResumeLayout(false);
             this.grbCadastro.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pibOlho)).EndInit();
             this.grbUsuEditar.ResumeLayout(false);
             this.grbUsuEditar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pibOlho2)).EndInit();
             this.grbUsuApagar.ResumeLayout(false);
             this.grbUsuApagar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PibLogoImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibOlho2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibOlho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibDetalhe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

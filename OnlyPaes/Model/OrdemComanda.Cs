@@ -31,6 +31,19 @@ namespace OnlyPaes.Model
             conexaoBD.Desconectar(con);
             return tabela;
         }
+        public DataTable BuscarPorFicha()
+        {
+            string comando = "SELECT * FROM view_fichas WHERE Ficha = @Id_Ficha";
+            Banco conexaoBD = new Banco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+            cmd.Parameters.AddWithValue("@Id_ficha", IdFicha);
+            cmd.Prepare();
+            DataTable tabela = new DataTable();
+            tabela.Load(cmd.ExecuteReader());
+            conexaoBD.Desconectar(con);
+            return tabela;
+        }
         public bool Cadastrar()
         {
             string comando = "INSERT INTO ordens_comandas (id_ficha, id_produto, quantidade, id_Resp) VALUES (@id_ficha, @id_produto, @quantidade, @id_resp)";
@@ -62,7 +75,37 @@ namespace OnlyPaes.Model
                 return false;
             }
         }
-    }
+
+        public bool EncerrarComanda()
+        {
+            string comando = "UPDATE ordens_comandas SET situacao = 0 WHERE id_ficha = @id_ficha AND situacao";
+            Banco conexaoBD = new Banco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+
+            cmd.Parameters.AddWithValue("@id_ficha", IdFicha);
+            cmd.Prepare();
+
+            try
+            {
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    conexaoBD.Desconectar(con);
+                    return false;
+                }
+                else
+                {
+                    conexaoBD.Desconectar(con);
+                    return true;
+                }
+            }
+            catch
+            {
+                conexaoBD.Desconectar(con);
+                return false;
+            }
+        }
+    } 
 }
    
 
